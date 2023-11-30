@@ -1,0 +1,107 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />  
+  <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <h1 class="fw-light"><img src="img\japflix.png" style="height: 43px;" alt="japflixIMG"></h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+      </ul>
+    </nav>
+
+    <div
+      style="display: flex; justify-content: center; align-items: center; height: 80vh;"
+    >
+      <div style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+    <div class="card col-md-5 bg-dark text-white"> <!-- Añade la clase de fondo y color de texto aquí -->
+      <div class="card-header">
+        Register form
+      </div>
+      <div class="card-body">
+<form class="row g-3 needs-validation" action="/auth/register" method="POST" novalidate="">
+  <div class="col-md-12">
+    <label for="name" class="form-label text-white">Usuario</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="Nombre de usuario"
+      name="name"
+      required=""
+    />
+    <div class="valid-feedback text-white">
+      ¡Se ve bien!
+    </div>
+  </div>
+  <div class="col-md-12">
+    <label for="email" class="text-white">Dirección de correo electrónico</label>
+    <div class="input-group">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustomUsername"
+        aria-describedby="inputGroupPrepend"
+        placeholder="name@example.com"
+        name="email"
+        required=""
+      />
+      <div class="invalid-feedback text-white">
+        Elige un nombre de usuario.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <label for="password" class="form-label text-white">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="ps1"
+      placeholder="Contraseña"
+      name="password"
+      required=""
+    />
+    <div class="valid-feedback text-white">
+      ¡Se ve bien!
+    </div>
+  </div>
+  <div class="col-md-12">
+    <label for="passwordConfirm" class="form-label text-white">Confirmar Contraseña</label>
+    <input
+      type="password"
+      class="form-control"
+      id="passwordConfirm"
+      placeholder="Confirmar Contraseña"
+      name="passwordConfirm" 
+      required=""
+    />
+    <div class="valid-feedback text-white">
+      ¡Se ve bien!
+    </div>
+  </div>
+  <div class="col-12 mt-3">
+    <button class="btn btn-primary" type="submit">Enviar formulario</button>
+  </div>
+</form>
+
+      </div>   
+       {{#if message}}
+        <h4 class="alert alert-danger mt-4">{{message}}</h4>
+      {{/if}}
+    </div>
+
+  </div>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Japflix</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark">
+      <nav>
+          <h1 class="fw-light"><img src="img\japflix.png" style="height: 43px;" alt="japflixIMG"></h1>
+      <ul>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+  <main>
+    <div class="detailsContainer">
+      <div class="movie-details-top" id="movieDetailsTop">
+      </div>
+    </div>
+    <div class="text-center container">
+      <div class="row py-md-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <input type="search" class="form-control" name="buscar" id="inputBuscar" placeholder="Ej.: The Lion King">
+          <button class="btn btn-primary m-4" id="btnBuscar">Buscar</button>
+        </div>
+      </div>
+    </div>
+    <div class="album">
+      <ul class="list-group container" id="lista">
+      </ul>
+    </div>
+  </main>
+  <footer class="text-muted py-3">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a>.
+      <p class="mb-1">Generado con fines estrictamente educativos.</p>
+    </div>
+  </footer>
+  <script src="js/bootstrap.bundle.min.js"></script>
+<script src="/script.js"></script>
+</body>
+</html>
